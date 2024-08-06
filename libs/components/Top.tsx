@@ -285,6 +285,14 @@ const Top = () => {
 									</Menu>
 								</>
 							) : (
+								// <Link href={'/account/join'}>
+								// 	<div className={'join-box'}>
+								// 		<AccountCircleOutlinedIcon />
+								// 		<span>
+								// 			{t('Login')} / {t('Register')}
+								// 		</span>
+								// 	</div>
+								// </Link>
 								<div>
 									<Button
 										style={{
