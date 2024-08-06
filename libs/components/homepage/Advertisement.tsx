@@ -24,13 +24,13 @@ const Advertisement = () => {
 		return (
 			<Stack className={'ads-frame'}>
 				<div className="ads-wrapper">
-					<Box className={'first-part'}>
+					<div className={'first-part'}>
 						<p>The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground.</p>
 						<b>
 							Discover how you can offset your adventure's carbon emissions and support the sustainable initiatives
 							practiced by our operators worldwide.
 						</b>
-					</Box>
+					</div>
 					<Box className={'second-part'}>
 						<div className="first-wrp">
 							<img className="first-flower" src="img/banner/simon.jpg" alt="" />
