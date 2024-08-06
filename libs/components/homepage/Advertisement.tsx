@@ -31,7 +31,7 @@ const Advertisement = () => {
 							practiced by our operators worldwide.
 						</b>
 					</div>
-					<Box className={'second-part'}>
+					<div className={'second-part'}>
 						<div className="first-wrp">
 							<img className="first-flower" src="img/banner/simon.jpg" alt="" />
 						</div>
@@ -43,7 +43,7 @@ const Advertisement = () => {
 							<img className="third-flower-small" src="img/banner/scind.jpeg" alt="" />
 							<img className="third-flower" src="img/banner/plant4.jpg" alt="" />
 						</div>
-					</Box>
+					</div>
 				</div>
 			</Stack>
 		);
