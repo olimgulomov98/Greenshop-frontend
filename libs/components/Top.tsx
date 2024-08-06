@@ -430,66 +430,11 @@ const Top = () => {
 														</div>
 													)}
 												</div>
-												<Box style={{ marginTop: '30px' }}>
-													{!loginView && (
-														<div className={'type-option'}>
-															<span style={{ color: '#45a358' }}>I want to be registered as:</span>
-															<div>
-																<FormGroup>
-																	<FormControlLabel
-																		sx={{ color: '#45a358' }}
-																		control={
-																			<Checkbox
-																				sx={{
-																					color: '#45a358',
-																					'&.Mui-checked': {
-																						color: '#45a358',
-																					},
-																				}}
-																				size="small"
-																				name={'USER'}
-																				onChange={checkUserTypeHandler}
-																				checked={input?.type == 'USER'}
-																				color="secondary"
-																			/>
-																		}
-																		label="User"
-																	/>
-																</FormGroup>
-																<FormGroup>
-																	<FormControlLabel
-																		sx={{ color: '#45a358' }}
-																		control={
-																			<Checkbox
-																				sx={{
-																					color: '#45a358',
-																					'&.Mui-checked': {
-																						color: '#45a358',
-																					},
-																				}}
-																				size="small"
-																				name={'AGENT'}
-																				onChange={checkUserTypeHandler}
-																				checked={input?.type == 'AGENT'}
-																			/>
-																		}
-																		label="Agent"
-																	/>
-																</FormGroup>
-															</div>
-														</div>
-													)}
-
-													{loginView && (
-														<div
-															style={{
-																display: 'flex',
-																flexDirection: 'row',
-																justifyContent: 'space-between',
-																alignItems: 'center',
-																marginTop: '50px',
-															}}
-														>
+												{/* <Box style={{ marginTop: '30px' }}> */}
+												{!loginView && (
+													<div className={'type-option'}>
+														<span style={{ color: '#45a358' }}>I want to be registered as:</span>
+														<div>
 															<FormGroup>
 																<FormControlLabel
 																	sx={{ color: '#45a358' }}
@@ -501,54 +446,106 @@ const Top = () => {
 																					color: '#45a358',
 																				},
 																			}}
-																			defaultChecked
 																			size="small"
+																			name={'USER'}
+																			onChange={checkUserTypeHandler}
+																			checked={input?.type == 'USER'}
+																			color="secondary"
 																		/>
 																	}
-																	label="Remember me"
+																	label="User"
 																/>
 															</FormGroup>
-															<a style={{ color: '#45a358', cursor: 'pointer' }}>Forgot password?</a>
+															<FormGroup>
+																<FormControlLabel
+																	sx={{ color: '#45a358' }}
+																	control={
+																		<Checkbox
+																			sx={{
+																				color: '#45a358',
+																				'&.Mui-checked': {
+																					color: '#45a358',
+																				},
+																			}}
+																			size="small"
+																			name={'AGENT'}
+																			onChange={checkUserTypeHandler}
+																			checked={input?.type == 'AGENT'}
+																		/>
+																	}
+																	label="Agent"
+																/>
+															</FormGroup>
 														</div>
-													)}
+													</div>
+												)}
 
-													{loginView ? (
-														<Button
-															style={{
-																width: '300px',
-																height: '45px',
-																color: 'white',
-																background: '#45a358',
-																left: '62px',
-																top: '30px',
-															}}
-															variant="contained"
-															// endIcon={<img src="/img/icons/rightup.svg" alt="" />}
-															disabled={input.nick == '' || input.password == ''}
-															onClick={doLogin}
-														>
-															LOGIN
-														</Button>
-													) : (
-														<Button
-															style={{
-																width: '300px',
-																height: '45px',
-																color: 'white',
-																background: '#45a358',
-																left: '62px',
-															}}
-															variant="contained"
-															disabled={
-																input.nick == '' || input.password == '' || input.phone == '' || input.type == ''
-															}
-															onClick={doSignUp}
-															// endIcon={<img src="/img/icons/rightup.svg" alt="" />}
-														>
-															SIGNUP
-														</Button>
-													)}
-												</Box>
+												{loginView && (
+													<div
+														style={{
+															display: 'flex',
+															flexDirection: 'row',
+															justifyContent: 'space-between',
+															alignItems: 'center',
+															marginTop: '50px',
+														}}
+													>
+														<FormGroup>
+															<FormControlLabel
+																sx={{ color: '#45a358' }}
+																control={
+																	<Checkbox
+																		sx={{
+																			color: '#45a358',
+																			'&.Mui-checked': {
+																				color: '#45a358',
+																			},
+																		}}
+																		defaultChecked
+																		size="small"
+																	/>
+																}
+																label="Remember me"
+															/>
+														</FormGroup>
+														<a style={{ color: '#45a358', cursor: 'pointer' }}>Forgot password?</a>
+													</div>
+												)}
+
+												{loginView ? (
+													<Button
+														style={{
+															width: '300px',
+															height: '45px',
+															color: 'white',
+															background: '#45a358',
+															left: '62px',
+															top: '30px',
+														}}
+														variant="contained"
+														// endIcon={<img src="/img/icons/rightup.svg" alt="" />}
+														disabled={input.nick == '' || input.password == ''}
+														onClick={doLogin}
+													>
+														LOGIN
+													</Button>
+												) : (
+													<Button
+														style={{
+															width: '300px',
+															height: '45px',
+															color: 'white',
+															background: '#45a358',
+															left: '62px',
+														}}
+														variant="contained"
+														disabled={input.nick == '' || input.password == '' || input.phone == '' || input.type == ''}
+														onClick={doSignUp}
+														// endIcon={<img src="/img/icons/rightup.svg" alt="" />}
+													>
+														SIGNUP
+													</Button>
+												)}
 												{/* <Box style={{ marginTop: '110px' }}> */}
 												{loginView ? (
 													<div style={{ marginTop: '130px', color: '#45a358' }}>
