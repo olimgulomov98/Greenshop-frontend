@@ -526,11 +526,11 @@
 			.ads-wrapper {
 				background-color: #efefeb;
 				height: 600px;
-				width: 1300px;
+				// width: 1300px;
 				margin: 90px;
 				display: flex;
 				flex-direction: row;
-				justify-content: space-between;
+				justify-content: space-around;
 
 				.first-part {
 					display: flex;

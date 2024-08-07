@@ -54,7 +54,7 @@ const withLayoutBasic = (Component: any) => {
 					break;
 				case '/community':
 					title = 'Community Page';
-					desc = 't';
+					desc = '';
 					bgColor = '#fafafa';
 
 					break;
